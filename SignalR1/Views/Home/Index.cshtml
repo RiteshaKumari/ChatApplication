@@ -1,0 +1,186 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="row" style="margin-top:5%;">
+        <div class="col-md-12 text-center">
+            <h3>Signal R with Entity Framework</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 text-center">
+            <img src="~/img/illustration_notifications.webp" width="80%" />
+        </div>
+        <div class="col-md-4">
+            <form id="loginForm" style="margin-top:40%;">
+                <div class="row">
+                    <div class="col-3">Email</div>
+                    <div class="col-6">
+                        <input type="text" name="email" id="txtemail" class="form-control" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Password</div>
+                    <div class="col-6">
+                        <input type="password" id="txtpassword" name="password" class="form-control" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-md-3">
+                        <button type="button" id="btnSubmit" class="btn btn-primary">Sign-In</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var connection = new signalR.HubConnectionBuilder()
+            .withUrl("/chatHub")
+            .configureLogging(signalR.LogLevel.Debug)
+            .withAutomaticReconnect()
+            .build();
+
+        function startConnection() {
+            return connection.start().catch(err => {
+                console.error("Error starting connection: ", err);
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => startConnection().then(resolve).catch(reject), 5000);
+                });
+            });
+        }
+
+        startConnection();
+
+        connection.on("OnConnected", function () {
+            console.log("SignalR connection established.");
+        });
+
+        $('#btnSubmit').click(function (e) {
+            var txtemail = $("#txtemail").val();
+            var txtpassword = $("#txtpassword").val();
+
+            if (txtemail === "" || txtpassword === "") {
+                alert("Please fill out both email and password fields.");
+                return;
+            }
+
+            $.ajax({
+                url: '/Home/Index',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ email: txtemail, password: txtpassword }),
+                success: function (response) {
+                    console.log("Login response:", response);
+                    if (response.success) {
+                        const userId = parseInt(response.userId);
+                        console.log("User ID:", userId);
+
+                        if (connection.state === signalR.HubConnectionState.Connected) {
+                            invokeSignalRMethod(userId);
+                        } else {
+                            startConnection().then(() => invokeSignalRMethod(userId));
+                        }
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error("AJAX Error:", error);
+                    console.error("Status:", status);
+                    console.error("Response:", xhr.responseText);
+                    alert("An error occurred while processing your request.");
+                }
+            });
+        });
+
+        function invokeSignalRMethod(userId) {
+            connection.invoke("SaveUserConnection", userId)
+                .then(function(result) {
+                    console.log("SaveUserConnection result:", result);
+                    if (result.success) {
+                        window.location.href = result.redirectUrl;
+                    } else {
+                        alert(result.message);
+                    }
+                })
+                .catch(function (err) {
+                    console.error("Error invoking SaveUserConnection:", err);
+                    alert("Error saving user connection. Please try again. Error: " + err.toString());
+                });
+        }
+    </script>
+   @*  <script>
+        var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
+
+        function startConnection() {
+            connection.start().then(function () {
+                console.log('Connected to ChatHub');
+            }).catch(function (err) {
+                console.error("Error connecting to ChatHub:", err.toString());
+                setTimeout(startConnection, 5000);
+            });
+        }
+
+        startConnection();
+
+        connection.on("OnConnected", function () {
+            console.log("SignalR connection established.");
+        });
+
+
+        $('#btnSubmit').click(function (e) {
+            var txtemail = $("#txtemail").val();
+            var txtpassword = $("#txtpassword").val();
+
+            if (txtemail === "" || txtpassword === "") {
+                alert("Please fill out both email and password fields.");
+                return;
+            }
+
+            $.ajax({
+                url: '/Home/Index',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ email: txtemail, password: txtpassword }),
+                success: function (response) {
+                    if (response.success) {
+                        const userId = response.userId;
+                        console.log("User ID:", userId);
+                      //connection.invoke("SaveUserConnection", userId)
+                      connection.invoke("SaveUserConnection")
+                .then(function () {
+                    console.log("SaveUserConnection invoked successfully");
+                })
+                .catch(function (err) {
+                    console.error("Error invoking SaveUserConnection:", err.toString());
+                    alert("Error saving user connection. Please try again.");
+                });
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error("AJAX Error:", error);
+                    console.error("Status:", status);
+                    console.error("Response:", xhr.responseText);
+                    alert("An error occurred while processing your request.");
+                }
+            });
+        });
+    </script>
+ *@
+</body>
+</html>
+

@@ -1,0 +1,144 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\net9.0\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net9.0\SignalR1.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net9.0\SignalR1.GlobalUsings.g.cs" />
+    <Compile Include="obj\Debug\net9.0\SignalR1.RazorAssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\Debug\net9.0\ApiEndpoints.json" />
+    <Content Include="obj\Debug\net9.0\scopedcss\bundle\SignalR1.styles.css" />
+    <Content Include="obj\Debug\net9.0\scopedcss\projectbundle\SignalR1.bundle.scp.css" />
+    <Content Include="obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css" />
+    <Content Include="obj\Debug\net9.0\SignalR1.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net9.0\staticwebassets.build.endpoints.json" />
+    <Content Include="obj\Debug\net9.0\staticwebassets.build.json" />
+    <Content Include="obj\Debug\net9.0\staticwebassets.development.json" />
+    <Content Include="obj\Debug\net9.0\staticwebassets.pack.json" />
+    <Content Include="obj\Debug\net9.0\staticwebassets.references.upToDateCheck.txt" />
+    <Content Include="obj\Debug\net9.0\staticwebassets.removed.txt" />
+    <Content Include="obj\Debug\net9.0\staticwebassets.upToDateCheck.txt" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\SignalR1.csproj.nuget.dgspec.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\Debug\net9.0\apphost.exe" />
+    <None Include="obj\Debug\net9.0\compressed\1t0037fntm-d7shbmvgxk.gz" />
+    <None Include="obj\Debug\net9.0\compressed\3u8jo8tece-j5mq2jizvt.gz" />
+    <None Include="obj\Debug\net9.0\compressed\41rrikdwrn-70lwusp2vn.gz" />
+    <None Include="obj\Debug\net9.0\compressed\4t7rdm3ciw-ttgo8qnofa.gz" />
+    <None Include="obj\Debug\net9.0\compressed\564k7umd7a-b7pk76d08c.gz" />
+    <None Include="obj\Debug\net9.0\compressed\5avzdloh5c-mrlpezrjn3.gz" />
+    <None Include="obj\Debug\net9.0\compressed\5imfo34dvb-87fc7y1x7t.gz" />
+    <None Include="obj\Debug\net9.0\compressed\6qj6xz9wgc-0i3buxo5is.gz" />
+    <None Include="obj\Debug\net9.0\compressed\8eu3zycod9-63fj8s7r0e.gz" />
+    <None Include="obj\Debug\net9.0\compressed\8s0cwc4r9a-kmzh56f8dh.gz" />
+    <None Include="obj\Debug\net9.0\compressed\8zzn4qq4rb-k8d9w2qqmf.gz" />
+    <None Include="obj\Debug\net9.0\compressed\99mk62p0j2-erw9l3u2r3.gz" />
+    <None Include="obj\Debug\net9.0\compressed\aez8atzvmk-h1s4sie4z3.gz" />
+    <None Include="obj\Debug\net9.0\compressed\cts2xwjg59-61n19gt1b8.gz" />
+    <None Include="obj\Debug\net9.0\compressed\d294q38tly-r4e9w2rdcm.gz" />
+    <None Include="obj\Debug\net9.0\compressed\eietsc83nj-ausgxo2sd3.gz" />
+    <None Include="obj\Debug\net9.0\compressed\f0fiod7pgb-fsbi9cje9m.gz" />
+    <None Include="obj\Debug\net9.0\compressed\f6h0aja9sh-2z0ns9nrw6.gz" />
+    <None Include="obj\Debug\net9.0\compressed\fbwbxmlyxj-v0zj4ognzu.gz" />
+    <None Include="obj\Debug\net9.0\compressed\fng6docxhd-70lwusp2vn.gz" />
+    <None Include="obj\Debug\net9.0\compressed\g32wnkkgbw-nvvlpmu67g.gz" />
+    <None Include="obj\Debug\net9.0\compressed\ge7ajo3jjj-m3i9f6419i.gz" />
+    <None Include="obj\Debug\net9.0\compressed\ggkqgwuix6-pj5nd1wqec.gz" />
+    <None Include="obj\Debug\net9.0\compressed\go8m9x1qm6-46ein0sx1k.gz" />
+    <None Include="obj\Debug\net9.0\compressed\gskw5le592-493y06b0oq.gz" />
+    <None Include="obj\Debug\net9.0\compressed\hd5jvyyngi-pk9g2wxc8p.gz" />
+    <None Include="obj\Debug\net9.0\compressed\hfqc2wf0yn-37tfw0ft22.gz" />
+    <None Include="obj\Debug\net9.0\compressed\hqgwxlgi2x-muycvpuwrr.gz" />
+    <None Include="obj\Debug\net9.0\compressed\igc287vtk1-83jwlth58m.gz" />
+    <None Include="obj\Debug\net9.0\compressed\imcbraa6p7-ag7o75518u.gz" />
+    <None Include="obj\Debug\net9.0\compressed\iurb5gguyv-6pdc2jztkx.gz" />
+    <None Include="obj\Debug\net9.0\compressed\ixk9s9159t-cqu3aupeo3.gz" />
+    <None Include="obj\Debug\net9.0\compressed\j4bjtiji9k-mlv21k5csn.gz" />
+    <None Include="obj\Debug\net9.0\compressed\j5honeb1ye-hrwsygsryq.gz" />
+    <None Include="obj\Debug\net9.0\compressed\k7ciorgej1-khv3u5hwcm.gz" />
+    <None Include="obj\Debug\net9.0\compressed\kg2ncc5cvk-tdbxkamptv.gz" />
+    <None Include="obj\Debug\net9.0\compressed\kgytw2en9i-c2oey78nd0.gz" />
+    <None Include="obj\Debug\net9.0\compressed\l5dypvjnu7-ft3s53vfgj.gz" />
+    <None Include="obj\Debug\net9.0\compressed\l75wvgbvay-47otxtyo56.gz" />
+    <None Include="obj\Debug\net9.0\compressed\l8r1y37boi-kbrnm935zg.gz" />
+    <None Include="obj\Debug\net9.0\compressed\llk3yolnbf-jd9uben2k1.gz" />
+    <None Include="obj\Debug\net9.0\compressed\ly5x3fsmyl-4v8eqarkd7.gz" />
+    <None Include="obj\Debug\net9.0\compressed\m3fgurndvk-ee0r1s7dh0.gz" />
+    <None Include="obj\Debug\net9.0\compressed\m7nda8rr3d-0j3bgjxly4.gz" />
+    <None Include="obj\Debug\net9.0\compressed\m7qota6mew-xtxxf3hu2r.gz" />
+    <None Include="obj\Debug\net9.0\compressed\n3eve4zxjo-356vix0kms.gz" />
+    <None Include="obj\Debug\net9.0\compressed\nik8x3ih49-notf2xhcfb.gz" />
+    <None Include="obj\Debug\net9.0\compressed\npb2qwy0xa-uaygsynrza.gz" />
+    <None Include="obj\Debug\net9.0\compressed\npu2p5cxul-dxx9fxp4il.gz" />
+    <None Include="obj\Debug\net9.0\compressed\oniyepaxix-ub07r2b239.gz" />
+    <None Include="obj\Debug\net9.0\compressed\oqo3hc6j2a-s35ty4nyc5.gz" />
+    <None Include="obj\Debug\net9.0\compressed\pc66g7ytce-x0q3zqp4vz.gz" />
+    <None Include="obj\Debug\net9.0\compressed\ppsk2zz739-fvhpjtyr6v.gz" />
+    <None Include="obj\Debug\net9.0\compressed\pslyjytqbd-06098lyss8.gz" />
+    <None Include="obj\Debug\net9.0\compressed\qpuxdc1flo-bqjiyaj88i.gz" />
+    <None Include="obj\Debug\net9.0\compressed\rwolfytdux-rzd6atqjts.gz" />
+    <None Include="obj\Debug\net9.0\compressed\tx09ps20kf-cosvhxvwiu.gz" />
+    <None Include="obj\Debug\net9.0\compressed\txmsh93t3h-c2jlpeoesf.gz" />
+    <None Include="obj\Debug\net9.0\compressed\u4v8e5vhpt-lzl9nlhx6b.gz" />
+    <None Include="obj\Debug\net9.0\compressed\u9dgxa59w6-iovd86k7lj.gz" />
+    <None Include="obj\Debug\net9.0\compressed\v5a9njeukh-jj8uyg4cgr.gz" />
+    <None Include="obj\Debug\net9.0\compressed\w7d8p1hrkv-6cfz1n2cew.gz" />
+    <None Include="obj\Debug\net9.0\compressed\wcadtl3uom-lcd1t2u6c8.gz" />
+    <None Include="obj\Debug\net9.0\compressed\ximtu632mt-y7v9cxd14o.gz" />
+    <None Include="obj\Debug\net9.0\compressed\yap7wrcgn4-o1o13a6vjx.gz" />
+    <None Include="obj\Debug\net9.0\compressed\zgtjdhqc14-vr1egmr9el.gz" />
+    <None Include="obj\Debug\net9.0\compressed\zvgoqbqns9-aexeepp0ev.gz" />
+    <None Include="obj\Debug\net9.0\refint\SignalR1.dll" />
+    <None Include="obj\Debug\net9.0\ref\SignalR1.dll" />
+    <None Include="obj\Debug\net9.0\SignalR1.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net9.0\SignalR1.assets.cache" />
+    <None Include="obj\Debug\net9.0\SignalR1.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net9.0\SignalR1.csproj.BuildWithSkipAnalyzers" />
+    <None Include="obj\Debug\net9.0\SignalR1.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net9.0\SignalR1.csproj.Up2Date" />
+    <None Include="obj\Debug\net9.0\SignalR1.dll" />
+    <None Include="obj\Debug\net9.0\SignalR1.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net9.0\SignalR1.genruntimeconfig.cache" />
+    <None Include="obj\Debug\net9.0\SignalR1.MvcApplicationPartsAssemblyInfo.cache" />
+    <None Include="obj\Debug\net9.0\SignalR1.pdb" />
+    <None Include="obj\Debug\net9.0\SignalR1.RazorAssemblyInfo.cache" />
+    <None Include="obj\Debug\net9.0\staticwebassets\msbuild.build.SignalR1.props" />
+    <None Include="obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.SignalR1.props" />
+    <None Include="obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.SignalR1.props" />
+    <None Include="obj\Debug\net9.0\staticwebassets\msbuild.SignalR1.Microsoft.AspNetCore.StaticWebAssetEndpoints.props" />
+    <None Include="obj\Debug\net9.0\staticwebassets\msbuild.SignalR1.Microsoft.AspNetCore.StaticWebAssets.props" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\SignalR1.csproj.nuget.g.props" />
+    <None Include="obj\SignalR1.csproj.nuget.g.targets" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+    <PackageReference Include="SqlTableDependency" Version="8.5.8" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+  </ItemGroup>
+
+</Project>
